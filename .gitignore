@@ -15,3 +15,9 @@ manifest.mf
 
 # Compiled file
 *.class
+
+# Jar files
+*.jar
+
+# War files
+*.war
