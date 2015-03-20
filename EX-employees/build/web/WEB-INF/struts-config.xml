@@ -16,21 +16,21 @@
     </global-exceptions>
 
     <global-forwards>
-        <forward name="login" path="/login.jsp"/>
+        <forward name="login" path="tile.Login"/>
     </global-forwards>
 
     <action-mappings>
         
     <action path="/index" type="org.apache.struts.actions.ForwardAction"
-        parameter="/login.jsp" />
+        parameter="tile.Login" />
     
     <action path="/addemploye" type="org.apache.struts.actions.ForwardAction"
-        parameter="/addemploye.jsp" />
+        parameter="tile.AddEmployee" />
     
     <action path="/Login"
       type="com.myapp.struts.action.LoginAction"
       validate="true"
-      input="/login.jsp"
+      input="tile.Login"
       name="loginForm"
       scope="request" >
       <forward name="success" path="/EmployeListe.do"/>
@@ -39,18 +39,18 @@
     <action path="/EmployeListe"
       type="com.myapp.struts.action.EmployeListeAction"
       scope="request" >
-      <forward name="success" path="/employeliste.jsp"/>
+      <forward name="success" path="tile.ListEmployee"/>
     </action>
 
     <action path="/Add"
       type="com.myapp.struts.action.AddEmployeAction"
       name="employeForm"
       scope="request"
-      input="/addemploye.jsp"
+      input="tile.AddEmployee"
       validate="true" >
       <set-property property="cancellable" value="true"/>
       <forward name="success" path="/EmployeListe.do"/>
-      <forward name="error" path="/addemploye.jsp"/>
+      <forward name="error" path="tile.AddEmployee"/>
     </action>
 
     <action path="/Edit"
@@ -58,7 +58,7 @@
       name="employeForm"
       scope="request"
       validate="false" >
-      <forward name="success" path="/editemploye.jsp"/>
+      <forward name="success" path="tile.EditEmployee"/>
       <forward name="error" path="/EmployeListe.do"/>
     </action>
 
@@ -66,11 +66,11 @@
       type="com.myapp.struts.action.EditEmployeAction"
       name="employeForm"
       scope="request"
-      input="/editemploye.jsp"
+      input="tile.EditEmployee"
       validate="true" >
       <set-property property="cancellable" value="true"/>
       <forward name="success" path="/EmployeListe.do"/>
-      <forward name="error" path="/editemploye.jsp"/>
+      <forward name="error" path="tile.EditEmployee"/>
     </action>
 
     <action path="/Delete"
@@ -83,6 +83,8 @@
 
     </action-mappings>
    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
     <message-resources parameter="com/myapp/struts/ApplicationResources"/>    
     
     <!-- ========================= Tiles plugin ===============================-->
@@ -112,5 +114,10 @@
 
     Paths found in Tiles definitions are relative to the main context.
     -->
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
   
 </struts-config>

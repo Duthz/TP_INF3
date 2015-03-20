@@ -10,29 +10,6 @@
   <logic:forward name="login" />
 </logic:notPresent>
 
-<html>
-  <head>
-    <title><bean:message key="app.title" /></title>
-  </head>
-  <body>
-
-    <table width="650"
-      border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td colspan="7">&nbsp;</td>
-      </tr>
-      <tr> 
-        <td  colspan="7" height="68" width="48%"> 
-          <div align="left">
-            <img src="images/logo_paris1.png">
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="7">&nbsp;</td>
-      </tr>
-    </table>
-
     <html:errors />
 
     <table width="750"
@@ -83,6 +60,3 @@
     <font size="-1" face="arial">
       <a href="addemploye.do">Ajouter un employé</a>
     </font>
-
-  </body>
-</html>
