@@ -5,7 +5,8 @@
  */
 package com.myapp.struts.model;
 
-import com.myapp.struts.bean.Employe;
+import java.util.ArrayList;
+import org.apache.struts.action.ActionForm;
 
 /**
  *
@@ -15,9 +16,9 @@ public interface IEmployeModel extends IModel{
     
     /**
      * Insère un employé dans la base de données
-     * @param e Employé à ajouter
+     * @param form
      */
-    public void insertEmploye(Employe e);
+    public void insertEmploye(ActionForm form);
     
     
     /**
@@ -25,5 +26,37 @@ public interface IEmployeModel extends IModel{
      * @param username Nom de l'employé à supprimer
      */
     public void deleteEmploye(String username);
+    
+    
+    /**
+     * Mets à jours les données d'un user
+     * @param form 
+     */
+      public void updateUser(ActionForm form);
+      
+      
+      /**
+       * 
+       * @param username
+       * @return
+       * @throws Exception 
+       */
+        public ActionForm buildEmployeForm(String username) throws Exception;
+
+
+        /**
+         * 
+         * @param username
+         * @param password
+         * @return 
+         */
+        public  String getUser(String username, String password);
+        
+        
+        /**
+         * 
+         * @return 
+         */
+        public  ArrayList getEmployes();
 
 }

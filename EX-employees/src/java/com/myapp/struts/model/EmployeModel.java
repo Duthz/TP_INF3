@@ -5,7 +5,8 @@
  */
 package com.myapp.struts.model;
 
-import com.myapp.struts.bean.Employe;
+import java.util.ArrayList;
+import org.apache.struts.action.ActionForm;
 
 /**
  *
@@ -13,13 +14,35 @@ import com.myapp.struts.bean.Employe;
  */
 public class EmployeModel implements IEmployeModel{
 
+
+
     @Override
-    public void insertEmploye(Employe e) {
+    public void deleteEmploye(String username) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void deleteEmploye(String username) {
+    public void insertEmploye(ActionForm form) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateUser(ActionForm form) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ActionForm buildEmployeForm(String username) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getUser(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList getEmployes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
