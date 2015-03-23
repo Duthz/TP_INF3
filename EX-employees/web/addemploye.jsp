@@ -15,7 +15,7 @@
           <td><bean:message key="app.username" />:</td>
           <td><html:text property="username" /></td>
           <td><bean:message key="app.password" />:</td>
-          <td><html:text property="password" /></td>
+          <td><html:password property="password" /></td>
         </tr>
         <tr>
           <td><bean:message key="app.name" />:</td>

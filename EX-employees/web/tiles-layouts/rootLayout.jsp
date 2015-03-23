@@ -12,9 +12,11 @@
   </head>
 
   <body>
+      <tiles:insert attribute="top_banner"/>
       <tiles:insert attribute="header"/>
 
       <tiles:insert attribute="article"/>
+      <tiles:insert attribute="footer"/>
 
   </body>
 </html>

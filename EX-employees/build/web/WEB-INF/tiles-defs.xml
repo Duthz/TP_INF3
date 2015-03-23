@@ -12,8 +12,10 @@
 
       <!-- Page layout used as root for all pages. -->
   <definition name="rootLayout" path="/tiles-layouts/rootLayout.jsp">
+    <put name="top_banner" value="/tiles-components/top_banner.jsp"/>
     <put name="header" value="/tiles-components/header.jsp"/>
     <put name="article" value="CHANGE-ME"/>
+    <put name="footer" value="/tiles-components/footer.jsp"/>
   </definition>
     
 
