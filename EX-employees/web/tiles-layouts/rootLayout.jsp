@@ -5,7 +5,7 @@
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 <%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
 
-
+<!DOCTYPE html>
 <html>
   <head>
     <title><bean:message key="app.title" /></title>
