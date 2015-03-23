@@ -21,11 +21,3 @@ manifest.mf
 
 # War files
 *.war
-
-*.class
-
-*.class
-
-*.class
-
-EX-employees/build/web/WEB-INF/classes/com/myapp/struts/action/DeleteEmployeAction.class
