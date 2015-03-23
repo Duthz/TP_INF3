@@ -33,3 +33,5 @@ EX-employees/build/web/WEB-INF/classes/com/myapp/struts/action/DeleteEmployeActi
 EX-employees/nbproject/project.properties
 
 EX-employees/nbproject/private/private.properties
+
+*.class
